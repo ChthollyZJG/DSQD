@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>这是我的乐淘首页</title>
+	<!-- 移动端的视口： 让页面在移动端展示的时候不会缩放 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- 引入站点图标  rel里面要知道icon表示引入文件是一个图标 href的路径就图标路径 -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- 1. 引入MUI的CSS包  提供基础的样式和组件-->
+	<link rel="stylesheet" href="lib/mui/css/mui.css">
+	<!-- 2. 引入字体图标的CSS包 提供了页面的图标 -->
+	<link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+	<!-- 3. 引入自己的样式文件（less）文件 注意rel="stylesheet/less"  提供页面的样式 -->
+	<link rel="stylesheet/less" href="less/index.less">
+	<!-- 4. 引入less的编译器文件less.js 这个less.js是需要编译Less来加载页面样式 优先引入让样式能够正常显示 用来编译less文件-->
+	<script src="lib/less/less.js"></script>
+</head>
+<body>
+   <!-- 外面的大容器通常使用id 提示选择器优先级 区分每一块功能 -->
+   <!-- 1. 头部区域  -->
+   <header id="header">
+   	 <h4>乐淘云购</h4>
+   	 <a href="#" class="fa fa-search" aria-hidden="true"></a>
+   </header>
+   <!-- 2. 轮播图区域 -->
+   <section id="slide">   	
+   	<div class="mui-slider">
+   	   <!-- 轮播图的图片容器 -->
+		  <div class="mui-slider-group mui-slider-loop">
+		  	 <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner4.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="images/banner1.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="images/banner2.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="images/banner3.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="images/banner4.png" /></a></div>
+		     <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
+		  </div>
+		  <!-- 轮播图小圆点容器 -->
+		  <div class="mui-slider-indicator">
+		      <!-- mui-active当前正在显示的小圆点 -->
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+   </section>
+   <!-- 3. 导航区域 -->
+   <nav id="nav"></nav>
+   <!-- 4. 广告区域 -->
+   <section id="banner"></section>
+   <!-- 5. 品牌专区 -->
+   <section id="brand"></section>
+   <!-- 6. 运动专区 -->
+   <section id="sport"></section>
+   <!-- 7. 女士专区 -->
+   <section id="women"></section>
+	<!-- 8. 男士专区 -->
+	<section id="man"></section>
+	<!-- 9. 底部导航 -->
+	<footer id="footer"></footer>
+	<!-- 5. 引入MUI的JS 文件 提供MUI一些JS特效 轮播图滑动之类的 -->
+	<script src="lib/mui/js/mui.js"></script>
+	<!-- 6. 引入获取元素要使用的zepto -->
+	<script src="lib/zepto/zepto.min.js"></script>
+	<!-- 7. 引入模板引擎的js文件 用来渲染页面 -->
+	<script src="lib/artTemplate/template.js"></script>
+	<!-- 8. 引入自己js  调用框架 发送请求之类代码-->
+	<script src="js/index.js"></script>
+</body>
+</html>
